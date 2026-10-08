@@ -1,0 +1,61 @@
+# ---------- Gradle / Kotlin ----------
+.gradle/
+.kotlin/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# ---------- Local machine config ----------
+local.properties
+.env
+.env.*
+
+# ---------- IDEs ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.fleet/
+.claude/settings.local.json
+
+# ---------- Android outputs ----------
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+lint-results*.xml
+lint-results*.html
+*.hprof
+*.trace
+
+# ---------- Signing (never commit) ----------
+*.keystore
+*.jks
+keystore.properties
+signing.properties
+google-services.json
+
+# ---------- Python (model export / helper scripts) ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+runs/
+
+# ---------- Model artifacts ----------
+# Raw training/export weights stay out of the repo; only the shipped
+# TFLite model in app assets is tracked (CI needs it for instrumented tests).
+*.pt
+*.onnx
+*.tflite
+!app/src/main/assets/*.tflite
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
